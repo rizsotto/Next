@@ -19,7 +19,7 @@ code and its comments.
   tables; those go in code comments next to the implementation.
 - Design rationale, trade-offs, or rejected alternatives - those go in
   [`../rationale/`](../rationale/); link them from a `## Rationale` section.
-- Bug reports or to-dos; those belong in the issue tracker.
+- Bug reports or to-dos; those belong in [`../../BACKLOG.md`](../../BACKLOG.md).
 
 ## File naming
 
@@ -30,6 +30,10 @@ code and its comments.
 The filename (without extension) is the requirement's unique identifier. Use it
 for cross-references in other requirement files and as the value tests cite in
 their `Requirements:` tag (see below).
+
+The `<area>` is a glossary noun from [`../overview.md`](../overview.md),
+for example `ticket-`, `queue-` or `call-`. Add the noun to the glossary
+first if it is missing.
 
 ## Structure
 
@@ -58,7 +62,7 @@ Only include if relevant.
 ### Known limitations
 
 Gaps in the contract that are accepted rather than planned for fixing;
-link the tracking issue when one exists.
+link the backlog item when one exists.
 Omit the section when there are none.
 
 ### Rationale

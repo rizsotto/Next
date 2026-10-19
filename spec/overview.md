@@ -2,8 +2,10 @@
 
 This document orients the reader: the problem, who is involved, the words
 we use, and what the system does. It does not say when or in what order
-things get built. Planning lives in GitHub milestones and issues; what is
-committed lives in [`requirements/`](requirements/).
+things get built. Open work lives in [`../BACKLOG.md`](../BACKLOG.md);
+what is committed lives in [`requirements/`](requirements/). Agents may
+edit this document for orientation and vocabulary, but behaviour belongs
+in a requirement.
 
 ## Purpose
 
@@ -40,7 +42,7 @@ consistently the bottleneck.
 - _service_: what the customer comes to get done, for example "passport
   renewal". The customer picks a service when taking a ticket. Services
   can be grouped into a hierarchy so customers find them easily.
-- _ticket_: a customer's place in line for one service. It carries a
+- _ticket_: a customer's place in line for a visit. It carries a
   number, which the display shows when the ticket is called.
 - _queue_: an ordered list of waiting tickets, first in, first out. A
   queue can hold tickets for one or more services.
@@ -57,7 +59,7 @@ consistently the bottleneck.
   without a new ticket.
 - _visit_: the customer's whole stay, from taking the ticket to leaving.
   One visit can include more than one serving, when there is a transfer.
-- _wait time_: the time from taking the ticket to the first call.
+- _wait time_: the time a ticket spends waiting before it is called.
 - _service time_: the length of one serving.
 - _kiosk_: the device where the customer picks a service and gets a
   ticket.
@@ -65,9 +67,13 @@ consistently the bottleneck.
   tickets.
 
 A ticket moves through these states: waiting, called, serving, done. A
-called ticket can also end as a no-show.
+called ticket can also end as a no-show. A transfer moves a serving ticket
+back to waiting.
 
 ## How a visit works
+
+A typical visit, as most queue systems run it. Items in the backlog may
+change the details.
 
 1. The customer picks a service at the kiosk and gets a ticket.
 2. The ticket joins the queue for that service. The display shows the
@@ -94,31 +100,3 @@ Common ways to organize queues, for reference:
 - mobile queuing: customers take a ticket and get called on their own
   phone.
 - hybrid: booked appointments are mixed with walk-in tickets.
-
-## Open questions
-
-Answer these while writing requirements. Move each answer into this
-document or a requirement, then remove the question.
-
-1. Does the system run one office, or many?
-2. Can a service feed more than one queue? If so, what picks the queue
-   for a new ticket?
-3. Can an office worker call from more than one queue? If so, what rule
-   picks the next ticket (oldest first, queue priority, ...)?
-4. Who starts a call: the office worker pressing "next", or the system
-   assigning tickets to free counters?
-5. How many recalls before a no-show? Can a no-show ticket go back into
-   the queue if the customer turns up late?
-6. Is transfer supported? Does a transferred customer keep their place,
-   or go to the end of the next queue?
-7. Can a customer cancel a ticket, or see their position and expected
-   wait somewhere other than the display?
-8. Are there priority tickets (for example for elderly or disabled
-   customers)?
-9. How are ticket numbers built (prefix per service, reset each day)?
-10. What happens to tickets still waiting when the office closes?
-11. Are services in the hierarchy all selectable, or only the leaves?
-12. Is the manager who reads reports the same person as the office admin?
-13. Does a ticket hold any personal data (name, phone number)?
-14. Which queue strategies does the system support at all? This is about
-    the product's boundary, not about order of work.

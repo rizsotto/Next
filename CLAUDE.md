@@ -12,6 +12,7 @@ Use the routing guide below to identify the project-specific instructions to rea
 | Add, modify, or review a requirement (contract) | `spec/requirements/CLAUDE.md` |
 | Record or look up a design decision, or a rejected option | `spec/rationale/CLAUDE.md` |
 | Look up scope, actors, or domain terms | `spec/overview.md` |
+| Pick up, add, or close a work item | `BACKLOG.md` |
 
 Keep the roles separate. A requirement says *what*; a rationale entry
 says *why*; the code says *how*. Reasoning does not belong in a
@@ -38,7 +39,8 @@ Always-on, language-agnostic standards for all code:
   scoped where it sharpens the scan-line (`docs(requirements): ...`).
 - Blank line, then a body explaining the *why*; the diff shows the *what*.
 - Reference a requirement ID when the commit implements or changes that
-  contract, and an issue or PR only when it adds context the body can't.
+  contract, a backlog item ID when it closes one, and a PR only when it
+  adds context the body can't.
 
 ## Output format
 
