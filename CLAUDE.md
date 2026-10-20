@@ -3,20 +3,20 @@
 Next is a "queue management system" for businesses which operates walk-in
 service.
 
-## Routing - read before modifying
+## Where things live
 
-Use the routing guide below to identify the project-specific instructions to read before making changes or running procedures.
+Each kind of content lives in one place. Before editing a place, read its
+rules.
 
-| When you are about to... | Read first |
-|---|---|
-| Add, modify, or review a requirement (contract) | `spec/requirements/CLAUDE.md` |
-| Record or look up a design decision, or a rejected option | `spec/rationale/CLAUDE.md` |
-| Look up scope, actors, or domain terms | `spec/overview.md` |
-| Pick up, add, or close a work item | `BACKLOG.md` |
+| Content | Lives in | Rules |
+|---|---|---|
+| Contract: what the system must do | `spec/requirements/` | `spec/requirements/CLAUDE.md` |
+| Reason: why a design was chosen, or an option rejected | `spec/rationale/` | `spec/rationale/CLAUDE.md` |
+| Words, actors, the big picture | `spec/overview.md` | its intro |
+| Open work: questions, bugs, to-dos | `BACKLOG.md` | its intro |
+| How it works | the code and its comments | Code guidelines below |
 
-Keep the roles separate. A requirement says *what*; a rationale entry
-says *why*; the code says *how*. Reasoning does not belong in a
-requirement body, and a contract does not belong in a rationale entry.
+A rule lives in one file. Other files link to it, never restate it.
 
 ## Spec first
 

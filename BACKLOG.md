@@ -3,16 +3,9 @@
 Open work items. Each item has a short ID, used to refer to it in commits
 and in other files.
 
-An item is done when its answer lands where it belongs:
-
-- behaviour the user can rely on goes into a requirement under
-  [`spec/requirements/`](spec/requirements/) (done once the user accepts it),
-- a design choice with trade-offs goes into an entry under
-  [`spec/rationale/`](spec/rationale/),
-- new or changed words go into the glossary in
-  [`spec/overview.md`](spec/overview.md).
-
-Remove the item when it is done; git history keeps it.
+An item is done when its answer is recorded where the root
+[`CLAUDE.md`](CLAUDE.md) says it lives; for a requirement, once the user
+accepts it. Remove the item when it is done; git history keeps it.
 
 ## Open questions
 
@@ -43,3 +36,10 @@ Remove the item when it is done; git history keeps it.
   number)?
 - **strategies**: Which queue strategies does the system support at all?
   This is about the product's boundary, not about order of work.
+
+## Tasks
+
+- **interface-format**: Pick the format of the interface definition that
+  names wire-level details (record it in rationale).
+- **requirement-checks**: Once requirements exist, add scripts that check
+  the template headings and dangling requirement IDs.

@@ -2,10 +2,7 @@
 
 This document orients the reader: the problem, who is involved, the words
 we use, and what the system does. It does not say when or in what order
-things get built. Open work lives in [`../BACKLOG.md`](../BACKLOG.md);
-what is committed lives in [`requirements/`](requirements/). Agents may
-edit this document for orientation and vocabulary, but behaviour belongs
-in a requirement.
+things get built. Agents may edit it for orientation and vocabulary.
 
 ## Purpose
 
