@@ -16,5 +16,3 @@ accepts it. Remove the item when it is done; git history keeps it.
   The MVP may not cover this.
 - **interface-format**: Pick the format of the interface definition that
   names wire-level details (record it in rationale).
-- **requirement-checks**: Once requirements exist, add scripts that check
-  the template headings and dangling requirement IDs.

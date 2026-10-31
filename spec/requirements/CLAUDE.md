@@ -1,7 +1,8 @@
 # Requirements directory
 
 Rules for requirement files. The format is in [`TEMPLATE.md`](TEMPLATE.md);
-copy it for a new requirement.
+copy it for a new requirement. Run `scripts/check-requirements.py` after
+changing one.
 
 ## Contract only
 
