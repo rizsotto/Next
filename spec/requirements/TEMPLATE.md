@@ -7,6 +7,11 @@ status: proposed
 
 <What the user expects to happen, from the user's perspective.>
 
+## Terms
+
+<Terms this requirement owns, one bullet each: `- _term_: meaning.` Omit when
+there are none.>
+
 ## Acceptance criteria
 
 <Given-When-Then scenarios. They are the canonical cases; tests implement

@@ -6,9 +6,9 @@ status: accepted
 ## Intent
 
 Each ticket gets a short number that a customer can read and type: the
-service's prefix, then a counter. It identifies one ticket for the day.
-The printed ticket shows when it was taken, so an old ticket is easy to
-spot.
+service's prefix, then a counter. It identifies one ticket for the [office
+day](office-hours.md#terms). The printed ticket shows when it was taken, so
+an old ticket is easy to spot.
 
 ## Acceptance criteria
 
@@ -20,8 +20,9 @@ spot.
   another, then the system refuses.
 - Given one service with no prefix, when tickets are taken for it, then
   they are plain numbers. Only one service can be without a prefix.
-- Given a number, when staff or the web view look it up, then they get
-  today's ticket with that number, never one from an earlier day.
+- Given a number, when staff or the [web view](display-web-view.md#terms)
+  look it up, then they get today's ticket with that number, never one from
+  an earlier day.
 - Given a ticket, when it is printed, then it shows its number, the date
   and the time.
 - Given any two tickets, when one is high priority, then their numbers

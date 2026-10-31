@@ -10,6 +10,11 @@ they can step out during the wait. They open one web page for the whole
 office and type their ticket number, with no app and no login. The system
 never contacts them.
 
+## Terms
+
+- _web view_: a web page where a customer follows a service on their own
+  phone.
+
 ## Acceptance criteria
 
 - Given a customer away from the office, when they enter their ticket

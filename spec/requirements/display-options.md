@@ -19,9 +19,10 @@ is set for the whole office.
 - Given the average time option is on and a service has no recent
   servings, when a display shows it, then no average is shown.
 - Given the waiting count option is on, when a display shows a service,
-  then it shows how many tickets with normal priority are waiting.
+  then it shows how many tickets with
+  [normal](priority-sum-of-weights.md#terms) priority are waiting.
 - Given the QR code option is on, when a display is on, then it shows one
-  QR code that opens the web view.
+  QR code that opens the [web view](display-web-view.md#terms).
 - Given an option is off, when a display is on, then that content is not
   shown.
 

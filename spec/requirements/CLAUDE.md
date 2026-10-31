@@ -17,12 +17,19 @@ A requirement says what the user can rely on. Keep out:
 ## IDs
 
 The filename without `.md` is the ID: `<area>-<short-name>.md`. The
-`<area>` is a glossary noun from [`../overview.md`](../overview.md), for
-example `ticket-`, `queue-` or `call-`. Add the noun to the glossary first
-if it is missing.
+`<area>` is a noun from the Actors or Glossary list in
+[`../overview.md`](../overview.md), for example `ticket-`, `queue-` or
+`call-`. Add the noun there first if it is missing.
 
 Use the ID in links from other files and in `Requirements: <id>` tags on
 tests.
+
+## Terms
+
+The glossary in [`../overview.md`](../overview.md) holds only the basic
+words. A term that belongs to a detail lives under `## Terms` in the
+requirement that owns it. Other files link its first use in the file, for
+example `[office day](office-hours.md#terms)`, and do not define it again.
 
 ## Status
 

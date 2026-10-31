@@ -6,8 +6,9 @@ status: accepted
 ## Intent
 
 Skills are always single services, but the office admin should not have to
-tick them one by one. They can give a worker a whole group at once, or copy
-the skills of another worker.
+tick them one by one. They can give a worker a whole
+[group](service-groups.md#terms) at once, or copy the skills of another
+worker.
 
 ## Acceptance criteria
 

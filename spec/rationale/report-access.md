@@ -11,12 +11,13 @@ office, and neither should need the other's rights.
 
 ## Decision
 
-Treat reports as sensitive data and control who can read them. The office
-admin can always read them, and can give others a read-only reports
-credential.
+Treat reports as sensitive data and control who can read them. Reading
+takes a read-only reports credential, which the office admin gives out.
+Setting up the system does not include reading reports, so the admin needs
+the credential too, by default.
 
 ## Consequences
 
-A small office has nothing to set up, since the admin is the manager. Access
-control is the real protection, so what a report may contain is still a
-choice to make with care.
+A small office has one extra step: the admin gives themselves the
+credential. Access control is the real protection, so what a report may
+contain is still a choice to make with care.

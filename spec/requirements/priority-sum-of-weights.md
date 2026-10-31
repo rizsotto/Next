@@ -5,8 +5,13 @@ status: accepted
 
 ## Intent
 
-A ticket's reasons turn into one priority by adding up their weights, so
-each extra reason moves a customer further ahead.
+A ticket's [reasons](priority-reason.md#terms) turn into one priority by
+adding up their weights, so each extra reason moves a customer further
+ahead.
+
+## Terms
+
+- _normal_: the priority of a ticket with no reason.
 
 ## Acceptance criteria
 

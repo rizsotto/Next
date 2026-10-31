@@ -9,6 +9,11 @@ The office admin arranges services into groups, so customers find them
 easily at the kiosk. Groups are only menus. A customer always ends up on a
 service, and only a service gets a ticket.
 
+## Terms
+
+- _group_: a menu of services and other groups at the kiosk, so customers
+  find a service easily.
+
 ## Acceptance criteria
 
 - Given a group, when a customer selects it at the kiosk, then they see

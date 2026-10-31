@@ -10,6 +10,11 @@ when it stops taking new tickets, and when it closes. An office day runs
 from opening to closing, so an office open past midnight needs no special
 rule.
 
+## Terms
+
+- _office day_: the time from the office's opening to its closing. "Today"
+  and "new day" mean this, not a calendar day.
+
 ## Acceptance criteria
 
 - Given the opening time, when it comes, then a new office day starts and

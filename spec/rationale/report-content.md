@@ -21,4 +21,4 @@ An office can use the flow report with no decision about staff data. The
 worker report still needs care: its numbers are a starting point for a
 conversation, not a verdict.
 
-Export and charts are out of the MVP. Revisit if managers ask for them.
+Export and charts are out of the MVP. Revisit if report readers ask for them.

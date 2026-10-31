@@ -29,7 +29,7 @@ def template_headings():
 def glossary_nouns():
     text = (ROOT / "spec" / "overview.md").read_text()
     terms = re.findall(r"^- _([^_]+)_", text, re.M)
-    return {term.replace(" ", "-") for term in terms}
+    return {term.lower().replace(" ", "-") for term in terms}
 
 
 def backlog_ids():
@@ -61,18 +61,27 @@ def check_requirement(path, headings, nouns):
         problems.append("headings out of template order")
 
     if not any(path.stem.startswith(noun + "-") for noun in nouns):
-        problems.append("ID does not start with a glossary noun")
+        problems.append("ID does not start with an overview noun")
     return problems
+
+
+def anchors(path):
+    text = re.sub(r"^```.*?^```", "", path.read_text(), flags=re.M | re.S)
+    headings = re.findall(r"^#+ (.+)$", text, re.M)
+    return {re.sub(r"[^a-z0-9-]", "", h.lower().replace(" ", "-")) for h in headings}
 
 
 def dangling_links(path):
     problems = []
-    for target in re.findall(r"\]\(([^)]+)\)", path.read_text()):
-        if re.match(r"[a-z]+:", target):
+    for link in re.findall(r"\]\(([^)]+)\)", path.read_text()):
+        if re.match(r"[a-z]+:", link):
             continue
-        target = target.split("#")[0]
-        if target and not (path.parent / target).exists():
-            problems.append(f"dangling link: {target}")
+        target, _, anchor = link.partition("#")
+        linked = path.parent / target if target else path
+        if not linked.exists():
+            problems.append(f"dangling link: {link}")
+        elif anchor and (not linked.is_file() or anchor not in anchors(linked)):
+            problems.append(f"dangling anchor: {link}")
     return problems
 
 
@@ -80,6 +89,22 @@ def dangling_ids(path, known):
     """Backticked kebab-case words in spec files name a requirement, rationale or backlog item."""
     words = re.findall(r"`([a-z0-9]+(?:-[a-z0-9]+)+)`", path.read_text())
     return [f"dangling ID: {word}" for word in words if word not in known]
+
+
+def duplicate_terms(requirements):
+    """A term lives in one place: the overview, or one requirement's Terms section."""
+    owners = {term: "the overview" for term in glossary_nouns()}
+    problems = []
+    for path in requirements.values():
+        section = re.search(r"^## Terms\n(.*?)(?=^## |\Z)", path.read_text(), re.M | re.S)
+        if not section:
+            continue
+        for term in re.findall(r"^- _([^_]+)_", section.group(1), re.M):
+            term = term.lower().replace(" ", "-")
+            if term in owners:
+                problems.append((path, f"term defined twice: {term} (also in {owners[term]})"))
+            owners.setdefault(term, path.name)
+    return problems
 
 
 def dangling_tags(requirements):
@@ -114,6 +139,7 @@ def main():
         problems += [(path, p) for p in dangling_links(path) + dangling_ids(path, known)]
     for path in [ROOT / "BACKLOG.md", ROOT / "CLAUDE.md", ROOT / "spec" / "overview.md"]:
         problems += [(path, p) for p in dangling_links(path)]
+    problems += duplicate_terms(requirements)
     problems += dangling_tags(requirements)
 
     for path, problem in problems:

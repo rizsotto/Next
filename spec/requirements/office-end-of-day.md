@@ -5,14 +5,21 @@ status: accepted
 
 ## Intent
 
-At closing time the office day ends, and no ticket carries over to the
-next day. Staff can end a day early, or extend it, when the day does not
-go to plan.
+At closing time the [office day](office-hours.md#terms) ends, and no ticket
+carries over to the next day. Staff can end a day early, or extend it, when
+the day does not go to plan.
+
+## Terms
+
+- _closing credential_: the right to end an office day early or extend it.
+  The office admin gives it and takes it back.
+- _not served_: the office day ended while the ticket was waiting. The
+  ticket is closed without serving.
 
 ## Acceptance criteria
 
 - Given a waiting ticket, when the closing time comes, then it ends as not
-  served, which reports show apart from no-shows.
+  served, which reports show apart from [no-shows](call-recall.md#terms).
 - Given a ticket being called or served, when the closing time comes, then
   it is not touched and the worker finishes as normal.
 - Given an office day that has ended, when a new office day starts, then

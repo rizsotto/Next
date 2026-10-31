@@ -14,7 +14,7 @@ and does not lose the time they already waited.
 - Given a serving, when the office worker transfers the customer and picks
   a service, then the ticket waits for that service.
 - Given a transferred ticket, when it waits again, then it has the same
-  number and the same reasons.
+  number and the same [reasons](priority-reason.md#terms).
 - Given a plain transfer, when the next ticket is picked, then the ticket
   counts as old as it was when first taken.
 

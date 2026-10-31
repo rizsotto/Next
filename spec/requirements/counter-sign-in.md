@@ -23,5 +23,5 @@ where.
   count as serving.
 - Given a worker signed out, when the worker report is built, then that
   time does not count as time with nothing to do.
-- Given a worker still signed in, when the office day ends, then they are
-  signed out.
+- Given a worker still signed in, when the [office
+  day](office-hours.md#terms) ends, then they are signed out.

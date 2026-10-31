@@ -9,6 +9,10 @@ Staff prove who they are the same way everywhere, whether by hardware such
 as a badge, or by software such as a login. The rest of the system does not
 depend on the method, so it can ship before any hardware does.
 
+## Terms
+
+- _authentication_: staff proving who they are.
+
 ## Acceptance criteria
 
 - Given a person authenticated by any method, when they use the system,

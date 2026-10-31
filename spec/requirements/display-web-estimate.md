@@ -5,9 +5,10 @@ status: accepted
 
 ## Intent
 
-A customer enters their ticket number on the web view and gets a rough
-estimate of when it will be called, from the tickets ahead of it, the
-office workers serving that service and the average service time.
+A customer enters their ticket number on the [web
+view](display-web-view.md#terms) and gets a rough estimate of when it will
+be called, from the tickets ahead of it, the office workers serving that
+service and the average service time.
 
 ## Acceptance criteria
 
@@ -20,7 +21,8 @@ office workers serving that service and the average service time.
 
 ## Known limitations
 
-The estimate treats every ticket as normal, so it can be too late for a
+The estimate treats every ticket as
+[normal](priority-sum-of-weights.md#terms), so it can be too late for a
 priority ticket and too early when priority tickets arrive.
 
 ## Rationale

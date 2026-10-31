@@ -5,11 +5,12 @@ status: accepted
 
 ## Intent
 
-The office admin chooses whether a ticket's reasons can change after the
-ticket is created. Where they can, a floor worker can take a customer's
-ticket number and add reasons, or drop them later. They see the waiting
-tickets with enough context to decide. The system does not stop them from
-making a poor choice.
+The office admin chooses whether a ticket's
+[reasons](priority-reason.md#terms) can change after the ticket is created.
+Where they can, a [floor worker](priority-credential.md#terms) can take a
+customer's ticket number and add reasons, or drop them later. They see the
+waiting tickets with enough context to decide. The system does not stop
+them from making a poor choice.
 
 ## Acceptance criteria
 

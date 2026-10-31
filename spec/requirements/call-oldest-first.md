@@ -5,10 +5,14 @@ status: accepted
 
 ## Intent
 
-A calling strategy picks the next ticket from those a worker can serve.
-With oldest first, among tickets of the same priority, the ticket that has
-waited longest goes first, so nobody is passed over because of the service
-they picked.
+With this calling strategy, among tickets of the same priority, the ticket
+that has waited longest goes first, so nobody is passed over because of the
+service they picked.
+
+## Terms
+
+- _calling strategy_: the rule that picks the next ticket from those a
+  worker can serve.
 
 ## Acceptance criteria
 

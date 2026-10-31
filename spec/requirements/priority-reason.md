@@ -10,6 +10,13 @@ labels, from a list the office admin sets up, and the reasons decide the
 priority. So the office sets its idea of fairness once, and calling only
 needs the priority.
 
+## Terms
+
+- _reason_: why a ticket should go ahead, for example "elderly person". A
+  ticket can have several.
+- _weight_: the value of one reason. A reason's weight feeds the ticket's
+  priority.
+
 ## Acceptance criteria
 
 - Given the office admin, when they add a reason, then they give it a
